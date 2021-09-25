@@ -57,6 +57,21 @@ def index():
     else:
         return jsonify(data)
 
+@app.route('/haha')
+def eiei():
+    p = request.args.get('dog')
+    pey = request.args.get('pey')
+    print(p)
+    if p or pey:
+        shabu = int(p)
+        if pey:
+            result = pets[shabu][pey]
+            return jsonify(result)
+        elif p:
+            result = pets[shabu]
+            return jsonify(result)
+        return jsonify(pets)           
+
 
 if __name__ == '__main__':
     app.run(port=8080, debug=True)

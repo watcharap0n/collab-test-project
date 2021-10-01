@@ -82,8 +82,8 @@ def root_page():
             return jsonify(data)
 
 
-@app.route('/post_data', methods=['POST'])
-def post_data():
+@app.route('/put_todo/<string:id>', methods=['PUT'])
+def post_data(id):
     pass
 
 

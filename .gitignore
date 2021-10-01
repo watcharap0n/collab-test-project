@@ -3,3 +3,4 @@ Pipfile.lock
 .gtattribures
 .vscode
 .DS_Store
+.idea

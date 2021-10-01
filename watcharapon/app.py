@@ -3,8 +3,7 @@ from flask import Flask, jsonify, request
 # flask -> package from -> package
 # import -> module
 
-app = Flask(__name__) # ไม่มีเปลี่ยนแปลง
-
+app = Flask(__name__)  # ไม่มีเปลี่ยนแปลง
 
 # methods GET, POST, PUT, DELETE
 
@@ -14,7 +13,7 @@ app = Flask(__name__) # ไม่มีเปลี่ยนแปลง
 # DELETE มันคือลบข้อมูล
 
 data = [
-    { 
+    {
         'id': '001',
         'name': 'watcharapon',
         'age': '24',
@@ -29,21 +28,20 @@ data = [
 ]
 
 
-
-@app.route('/index', methods=['GET', 'POST']) # default GET
+@app.route('/index', methods=['GET', 'POST'])  # default GET
 def root_page():
     if request.method == 'GET':
-        q = request.args.get('query') # func  -> 0 string
+        q = request.args.get('query')  # func  -> 0 string
         key = request.args.get('key')
         search = request.args.get('search')
         if q or key:
-            query = int(q) # string -> int
+            query = int(q)  # string -> int
             if key:
-                result = data[query][key] # data[0]
-                return jsonify(result) # index 0
+                result = data[query][key]  # data[0]
+                return jsonify(result)  # index 0
             elif q:
                 result = data[query]
-                return jsonify(result) # index 0
+                return jsonify(result)  # index 0
         elif search:
             new_data = {}
             for i in data:
@@ -87,7 +85,6 @@ def root_page():
 @app.route('/post_data', methods=['POST'])
 def post_data():
     pass
-
 
 
 if __name__ == '__main__':

@@ -4,3 +4,6 @@ Pipfile.lock
 .vscode
 .DS_Store
 .idea
+watcharapon/client/.nuxt
+watcharapon/client/node_modules
+watcharapon/client/yarn.lock

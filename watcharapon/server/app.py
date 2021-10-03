@@ -1,10 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 # flask -> package from -> package
 # import -> module
 
 app = Flask(__name__)  # ไม่มีเปลี่ยนแปลง
-
+cors = CORS(app, resources={r'/*': {'origins': '*'}})
+app.secret_key = 'testapifunc'
 # methods GET, POST, PUT, DELETE
 
 # GET คือการเรียกดูข้อมูล

@@ -7,3 +7,6 @@ Pipfile.lock
 watcharapon/client/.nuxt
 watcharapon/client/node_modules
 watcharapon/client/yarn.lock
+nattawut/client/.nuxt
+nattawut/client/node_modules
+nattawut/client/yarn.lock

@@ -116,8 +116,8 @@ def eiei():
         return jsonify(pets) 
 
 
-@app.route('/post_data', methods=['POST'])
-def post_data():
+@app.route('/put_todo/<string:id>', methods=['PUT'])
+def put_data():
     pass
 
 if __name__ == '__main__':
